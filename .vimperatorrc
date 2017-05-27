@@ -40,8 +40,11 @@ set focuscontent
 " show tabbar only
 set gui=none,tabs,addons
 
-" change in characters
+" change hint characters
 set hintchars=hjklasdfgyuiopqwertnmzxcvb
+
+" passthrough to enable html5 video controls
+set passthrough=true
 
 
 
@@ -142,3 +145,4 @@ autocmd VimperatorEnter .* :source ~/.vimperator/fmaps.vimp
 
 " }}}1
 " vim: ft=vimperator ts=4 sw=4 sts=0 et fdm=marker fdc=3
+
