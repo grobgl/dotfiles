@@ -9,6 +9,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # conda environments
 alias tf='source activate tensorflow'
 
+# connect to raspberry pi
+alias pi='ssh pi@192.168.0.24'
+
 
 # software configs {{{1
 
@@ -16,6 +19,10 @@ alias tf='source activate tensorflow'
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
     source /etc/profile.d/vte.sh
 fi
+
+
+# environment vars {{{1
+
 
 # path {{{1
 
