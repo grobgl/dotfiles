@@ -17,8 +17,15 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
     source /etc/profile.d/vte.sh
 fi
 
+# path {{{1
+
 # anaconda install location
-export PATH="/home/georg/.anaconda3/bin:$PATH"
+PATH="/home/georg/.anaconda3/bin:$PATH"
+
+# get-shit-done
+PATH="/home/georg/.repos/get-shit-done:$PATH"
+
+export PATH
 
 # }}}1
 
