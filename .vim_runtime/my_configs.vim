@@ -21,5 +21,11 @@ let g:multi_cursor_next_key="\<C-n>"
 let g:gundo_prefer_python3 = 1
 nnoremap <F4> :GundoToggle<CR>
 
+" tagbar toggle
+nmap <F8> :TagbarToggle<CR>
+
+" nerdtree pos
+let g:NERDTreeWinPos = "left"
+
 " }}}1
 
