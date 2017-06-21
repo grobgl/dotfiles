@@ -7,6 +7,9 @@ let g:lightline = {
       \ }
 set background=dark
 
+" remove extra line below status line
+set cmdheight=1
+
 
 " tabs configuration {{{1
 
