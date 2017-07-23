@@ -137,7 +137,7 @@ style -name iconize-tab chrome://* .tabbrowser-tab:not([pinned]) { min-width: 28
 
 
 " colorscheme {{{1
-colorscheme solarized_dark
+colorscheme material
 
 
 " autocmds {{{1
