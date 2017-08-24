@@ -45,7 +45,7 @@ hi Number   color: CornflowerBlue;
 hi CompTitle    font-family: San Francisco Display; background: #263238;
 hi CompTitle>*  font-family: San Francisco Display; color: #F5F5F5; padding: 1px 0.5ex; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), none, 0 1px 3px rgba(0, 0, 0, 0.12), none;
 hi CompItem font-family: San Francisco Display;
-hi CompItem[selected] color: cyan;  background: #151515;
+hi CompItem[selected] color: #F5F5F5;  background: #607d8b;
 hi CompDesc   color: #D81B60;
 
 hi Title    font-family: San Francisco Display; color:  #263238;

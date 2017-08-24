@@ -1,14 +1,24 @@
 " styles {{{1
 
 " set colorscheme
-colorscheme solarized
-let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ }
-set background=dark
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
+set laststatus=2
 
 " remove extra line below status line
 set cmdheight=1
+
+" show line numbers
+set number
+
+" enable bold code syntax highlights
+let g:enable_bold_font=1
+
+" airline setup
+let g:airline_theme='base16'
 
 
 " tabs configuration {{{1
@@ -29,7 +39,7 @@ set smarttab
 
 " plugin configs {{{1
 
-" syntastic off by default, toggle with F5
+" syntastic off by default, toggle with F6
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <F5> :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
