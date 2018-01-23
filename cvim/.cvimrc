@@ -5,8 +5,10 @@ saveToPocket() -> {{
 unmap s
 map s :call saveToPocket<CR>
 
-let locale = "uk"
-let barposition = "bottom"
+let locale = 'uk'
+let barposition = 'bottom'
+
+let qmark p = 'https://getpocket.com/a/queue/list/'
 
 let configpath = '/home/georg/.cvimrc'
 set localconfig
