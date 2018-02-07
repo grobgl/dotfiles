@@ -4,7 +4,9 @@ Xft.rgba:      rgb
 Xft.hintstyle: hintfull
 Xft.dpi:       220
 
-xterm*faceName: Hack for Powerline
+xterm.termName: xterm-256color
+
+xterm*faceName: Hack
 xterm*faceSize: 10
 
 xterm*vt100*selectToClipboard: true
