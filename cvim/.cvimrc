@@ -1,24 +1,28 @@
 " disable websites automatically focusing on input field
 set noautofocus
 
+let locale = 'uk'
+let barposition = 'bottom'
+
+let qmark p = 'https://getpocket.com/a/queue/list/'
+
 " saving to pocket
 saveToPocket(link) -> {{
-  var e=function(t,n,r,o,a){var c=[5314821,2160554,2164615,6263550,6443748,3630330,2998458,3917600,5691823,6010641],o=o||0,i=0,n=n||[],r=r||0,d={a:97,b:98,c:99,d:100,e:101,f:102,g:103,h:104,i:105,j:106,k:107,l:108,m:109,n:110,o:111,p:112,q:113,r:114,s:115,t:116,u:117,v:118,w:119,x:120,y:121,z:122,A:65,B:66,C:67,D:68,E:69,F:70,G:71,H:72,I:73,J:74,K:75,L:76,M:77,N:78,O:79,P:80,Q:81,R:82,S:83,T:84,U:85,V:86,W:87,X:88,Y:89,Z:90,0:48,1:49,2:50,3:51,4:52,5:53,6:54,7:55,8:56,9:57,"/":47,":":58,"?":63,"=":61,"-":45,_:95,"&":38,$:36,"!":33,".":46};(a=a||0)&&0!=a||(t=c[0]+t);for(u=0;u<t.length;u++){var f=function(t,e){return d[t[e]]?d[t[e]]:t.charCodeAt(e)}(t,u);1*!f&&(f=3);var h=f*(c[o]+f*c[i%c.length]);n[r]=(n[r]?n[r]+h:h)+a+i;var l=h%50;if(n[l]){var m=n[r];n[r]=n[l],n[l]=m}i+=h,r=50==r?0:r+1,o=o==c.length-1?0:o+1}if(100==a){for(var s="",u=0;u<n.length;u++)s+=String.fromCharCode(n[u]%25+97);return c=function(){},s+"8bd560adfa"}return e(i+"",n,r,o,a+1)},t=document,n=link?link.href:t.location.href,r=t.title,i=e(n),s=t.createElement("script");s.type="text/javascript",s.src="https://getpocket.com/b/r4.js?h="+i+"&u="+encodeURIComponent(n)+"&t="+encodeURIComponent(r),e=i=function(){};var o=t.getElementsByTagName("head")[0]||t.documentElement;o.appendChild(s);
+  var style = document.createElement("style");
+  document.head.appendChild(style);
+  style.sheet.insertRule('#PKT_BM_OVERLAY{display:none;}');
+  var e=function(t,n,r,o,a){var c=[5314821,2160554,2164615,6263550,6443748,3630330,2998458,3917600,5691823,6010641],o=o||0,i=0,n=n||[],r=r||0,d={a:97,b:98,c:99,d:100,e:101,f:102,g:103,h:104,i:105,j:106,k:107,l:108,m:109,n:110,o:111,p:112,q:113,r:114,s:115,t:116,u:117,v:118,w:119,x:120,y:121,z:122,A:65,B:66,C:67,D:68,E:69,F:70,G:71,H:72,I:73,J:74,K:75,L:76,M:77,N:78,O:79,P:80,Q:81,R:82,S:83,T:84,U:85,V:86,W:87,X:88,Y:89,Z:90,0:48,1:49,2:50,3:51,4:52,5:53,6:54,7:55,8:56,9:57,"/":47,":":58,"?":63,"=":61,"-":45,_:95,"&":38,$:36,"!":33,".":46};(a=a||0)&&0!=a||(t=c[0]+t);for(u=0;u<t.length;u++){var f=function(t,e){return d[t[e]]?d[t[e]]:t.charCodeAt(e)}(t,u);1*!f&&(f=3);var h=f*(c[o]+f*c[i%c.length]);n[r]=(n[r]?n[r]+h:h)+a+i;var l=h%50;if(n[l]){var m=n[r];n[r]=n[l],n[l]=m}i+=h,r=50==r?0:r+1,o=o==c.length-1?0:o+1}if(100==a){for(var s="",u=0;u<n.length;u++)s+=String.fromCharCode(n[u]%25+97);return c=function(){},s+"8bd560adfa"}return e(i+"",n,r,o,a+1)},t=document,n=link?link.href:t.location.href,r=link?(link.alt||link.text):t.title,i=e(n),s=t.createElement("script");s.type="text/javascript",s.src="https://getpocket.com/b/r4.js?h="+i+"&u="+encodeURIComponent(n)+"&t="+encodeURIComponent(r),e=i=function(){};var o=t.getElementsByTagName("head")[0]||t.documentElement;o.appendChild(s);
+  Status.setMessage("Saved to Pocket: " + r + " " + n, 3);
 }}
 map s :call saveToPocket<CR>
 map S createScriptHint(saveToPocket)
 
 " copy link to clipboard
 copyToClipboard(link) -> {{
-  Status.setMessage(link.text,3);
-  Clipboard.copy(link.text);
+  Status.setMessage("Copied to clipboard: "+link.href,3);
+  Clipboard.copy(link.href);
 }}
 map C createScriptHint(copyToClipboard)
-
-let locale = 'uk'
-let barposition = 'bottom'
-
-let qmark p = 'https://getpocket.com/a/queue/list/'
 
 let configpath = '/home/georg/.cvimrc'
 set localconfig
