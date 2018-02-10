@@ -12,6 +12,7 @@ let qmark a = 'https://www.theatlantic.com/world/'
 let qmark m = 'https://www.newyorker.com/'
 let qmark t = 'https://www.nytimes.com/'
 let qmark y = 'https://www.youtube.com/'
+let qmark v = 'https://www.theverge.com/'
 let qmark z = 'http://www.zeit.de/index'
 let qmark s = 'http://www.spiegel.de/'
 
