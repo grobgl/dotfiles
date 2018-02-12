@@ -7,6 +7,7 @@ let mapleader = ","
 
 let qmark p = 'https://getpocket.com/a/queue/list/'
 let qmark g = 'https://mail.google.com/'
+let qmark c = 'https://calendar.google.com/calendar/r'
 let qmark n = 'https://news.ycombinator.com/'
 let qmark a = 'https://www.theatlantic.com/world/'
 let qmark m = 'https://www.newyorker.com/'
@@ -46,6 +47,16 @@ site 'https://getpocket.com/a/read/*' {
   star -> {{ document.getElementById('pagenav_favorite').children[0].click() }}
   map <Leader>s :call star<CR>
 }
+
+" use O and T in google to modify search query (instead of full search url)
+site 'https://*.google.*/search*' {
+  openSearchQuery -> {{ Command.show(false, `open g ${new URL(window.location.href).searchParams.get("q")} `) }}
+  map O :call openSearchQuery <CR>
+
+  openSearchQueryTabbed -> {{ Command.show(false, `tabnew g ${new URL(window.location.href).searchParams.get("q")} `) }}
+  map T :call openSearchQueryTabbed <CR>
+}
+
 
 let configpath = '/home/georg/.cvimrc'
 set localconfig
