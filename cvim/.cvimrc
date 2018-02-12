@@ -1,5 +1,6 @@
 " disable websites automatically focusing on input field
 set noautofocus
+set autohidecursor
 
 let locale = 'uk'
 let barposition = 'bottom'
@@ -16,6 +17,21 @@ let qmark y = 'https://www.youtube.com/'
 let qmark v = 'https://www.theverge.com/'
 let qmark z = 'http://www.zeit.de/index'
 let qmark s = 'http://www.spiegel.de/'
+
+let searchlimit = 25
+let completionengines = ['google']
+
+" disable hints for certain links
+-> {{
+  const extraFilters = {
+		'*://news.ycombinator.com*': { reject: ['*'], accept: ['a.storylink', '.subtext > a[href^=item]'] }
+  };
+
+  Object.getOwnPropertyNames(extraFilters).forEach(pattern => {
+      Hints.siteFilters[pattern] = extraFilters[pattern];
+  });
+}}
+
 
 " saving to pocket
 saveToPocket(link) -> {{
