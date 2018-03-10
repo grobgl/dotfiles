@@ -5,3 +5,6 @@
 .vimperator/info/default/quickmarks
 umatrix/
 
+python/.ipython/profile_default/startup
+zsh/.zsh-update
+
