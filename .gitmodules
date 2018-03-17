@@ -4,3 +4,12 @@
 [submodule "zsh/.oh-my-zsh"]
 	path = zsh/.oh-my-zsh
 	url = git@github.com:robbyrussell/oh-my-zsh.git
+[submodule "base16/.base16-manager/chriskempson/base16-shell"]
+	path = base16/.base16-manager/chriskempson/base16-shell
+	url = git@github.com:chriskempson/base16-shell.git
+[submodule "base16/.base16-manager/chriskempson/base16-vim"]
+	path = base16/.base16-manager/chriskempson/base16-vim
+	url = git@github.com:chriskempson/base16-vim.git
+[submodule "base16/.base16-manager/chriskempson/base16-xresources"]
+	path = base16/.base16-manager/chriskempson/base16-xresources
+	url = git@github.com:chriskempson/base16-xresources.git
