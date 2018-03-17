@@ -102,7 +102,7 @@ alias tkill='tmux kill-session -t'
 # convenience aliases for editing configs
 alias ev='vim ~/.vim_runtime/my_configs.vim'
 alias et='vim ~/.tmux.conf'
-alias ez='vim ~/.oh-my-zsh/custom/custom.zsh'
+alias ez='vim ~/.zshrc'
 alias ei='vim ~/.config/i3/config'
 alias s='source ~/.zshrc'
 
@@ -128,6 +128,8 @@ export VISUAL=$EDITOR
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
+# add custom scripts to path
+export PATH=~/dotfiles/scripts:$PATH
 
 # }}}1
 
