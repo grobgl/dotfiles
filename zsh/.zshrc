@@ -65,31 +65,69 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export ARCHFLAGS="-arch x86_64"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# zsh stuff {{{1
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# if you do a 'rm *', Zsh will give you a sanity check!
+setopt RM_STAR_WAIT
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# allows you to type Bash style comments on your command line
+setopt interactivecomments
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+# Zsh has a spelling corrector
+setopt CORRECT
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# aliases {{{1
+
+# dotfiles git shortcut
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# conda environments
+alias tf='source activate tensorflow'
+
+# connect to raspberry pi
+alias pi='ssh pi@192.168.0.24'
+
+# aliases for Tmux
+alias tmux='tmux -2'
+alias ta='tmux attach -t'
+alias tnew='tmux new -s'
+alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
+
+# convenience aliases for editing configs
+alias ev='vim ~/.vim_runtime/my_configs.vim'
+alias et='vim ~/.tmux.conf'
+alias ez='vim ~/.oh-my-zsh/custom/custom.zsh'
+alias ei='vim ~/.config/i3/config'
+alias s='source ~/.zshrc'
+
+# git shortcuts
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add'
+alias gac='git commit -a -m'
+alias gc='git commit -m'
+alias gps='git push'
+
+# environment vars {{{1
+
+# use vim as text editor
+export EDITOR="vim"
+export USE_EDITOR=$EDITOR
+export VISUAL=$EDITOR
+
+
+# style {{{1
+
+# set up base16 shell
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+
+# }}}1
+
