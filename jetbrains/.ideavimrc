@@ -1,0 +1,17 @@
+let mapleader = ","
+
+set surround
+
+nmap <leader>f :action GotoFile<cr>
+nmap <leader>c :action GotoClass<cr>
+
+nmap <Leader>x :x<CR>
+nmap <Leader>q :q<CR>
+nmap <Leader>w :w<CR>
+
+; navigate between panes
+nmap <C-l> <C-w>l
+nmap <C-h> <C-w>h
+
+vmap sc :s#\C\([a-z0-9]\+\)\(\u\)#\l\1_\l\2#g<CR>
+vmap cc :s#_\(\l\)#\u\1#g<CR>
