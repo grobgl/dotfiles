@@ -15,5 +15,8 @@ redshift &
 # start udiskie
 udiskie -t &
 
+# start insync
+insync start
+
 # start i3
 exec i3
