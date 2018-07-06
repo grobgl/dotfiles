@@ -3,4 +3,8 @@ URxvt.font: xft:Hack:size=10:hinting=True;antialias:True,xft:PowerlineSymbols,xf
 URxvt.boldFont: xft:Hack:size=10:bold;hinting=True;antialias:True,xft:Font Awesome:size=10
 
 !! no scrollbar
+URxvt*scrollBar_right: false
+URxvt*scrollBar: false
 URxvt.scrollBar: false
+
+URxvt.borderless: true

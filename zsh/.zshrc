@@ -89,9 +89,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # conda environments
 alias tf='source activate tensorflow'
 
-# connect to raspberry pi
-alias pi='ssh pi@192.168.0.24'
-
 # aliases for Tmux
 alias tmux='tmux -2'
 alias ta='tmux attach -t'
@@ -113,6 +110,10 @@ alias ga='git add'
 alias gac='git commit -a -m'
 alias gc='git commit -m'
 alias gps='git push'
+
+# pi
+alias pi='ssh pi@192.168.1.4'
+alias pi3='ssh pi@192.168.1.11'
 
 # environment vars {{{1
 

@@ -12,5 +12,8 @@ setxkbmap -option caps:escape
 # start redshift
 redshift &
 
+# start udiskie
+udiskie -t &
+
 # start i3
 exec i3
