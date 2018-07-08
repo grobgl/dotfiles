@@ -185,6 +185,7 @@ for_window [class="^.*"] border pixel 0
 
 # gap size
 gaps inner 10
+gaps outer -10
 
 # only show gaps if more than one container
 smart_gaps on

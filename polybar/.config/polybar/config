@@ -39,6 +39,7 @@ color7 =  #a89984
 color15 = #ebdbb2
 
 [bar/mybar]
+dpi = 192
 width = 100%
 height = 60
 fixed-center = true 
@@ -56,28 +57,23 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "SF Pro Display:size=20;5"
-font-1 = FontAwesome:pixelsize=20;4 
+font-0 = "SF Pro Display:size=10;5"
+font-1 = FontAwesome:pixelsize=10;4 
 font-2 = siji:pixelsize=10
 font-3 = unifont:fontformat=truetype:size=8:antialias=false
+font-4 = "Font Awesome 5 Free:style=Regular:size=10;4"
+; font-5 = "Font Awesome 5 Brands:style=Solid:size=10;4"
 
 modules-left = i3
 modules-center = xwindow
-modules-right = date battery powermenu
+modules-right = date battery network powermenu
 
 tray-position = right
-tray-background = #073642
+tray-maxsize = 32
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
-! [module/weather]
-! type = custom/script
-! interval = 1800
-! format = <label>
-! format-prefix = " "
-! format-prefix-foreground = ${colors.foreground}
-! exec = ~/.config/polybar/weather
 
 [module/xwindow]
 type = internal/xwindow
@@ -108,7 +104,14 @@ reverse-scroll = true
 ; Example: code;♚ will apply the icon to all workspaces 
 ; containing 'code' in the label
 ; Default: false
-fuzzy-match = true
+; fuzzy-match = true
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;♜
+ws-icon-3 = 4;♝
+ws-icon-4 = 5;♞
+ws-icon-default = 
 
 ; Available tags:
 ;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
@@ -176,10 +179,6 @@ format-prefix-foreground = ${colors.foreground}
 label = %date%    %time%
 
 
-
-! modules-right = weather date powermenu
-
-
 [module/powermenu]
 type = custom/menu
 
@@ -230,6 +229,21 @@ adapter = ADP1
 ; Default: 5
 poll-interval = 5
 
+
+[module/network]
+type = internal/network
+interface = wlp2s0
+
+; Test connectivity every Nth update
+; A value of 0 disables the feature
+; NOTE: Experimental (needs more testing)
+; Default: 0
+;ping-interval = 3
+
+; Accumulate values from all interfaces
+; when querying for up/downspeed rate
+; Default: false
+accumulate-stats = true
 
 
 [settings]

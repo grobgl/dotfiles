@@ -1,2 +1,8 @@
 clear Lock
 keycode 0x42=Escape
+keycode  26 = e E e E ediaeresis Ediaeresis ediaeresis
+keycode  30 = u U u U udiaeresis Udiaeresis udiaeresis
+keycode  31 = i I i I idiaeresis Idiaeresis idiaeresis
+keycode  32 = o O o O odiaeresis Odiaeresis odiaeresis
+keycode  38 = a A a A adiaeresis Adiaeresis adiaeresis
+
