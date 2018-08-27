@@ -37,6 +37,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# monitor toggle
+bindsym $mod+Shift+s exec --no-startup-id /home/georg/.config/i3/toggle_screen.sh
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -177,7 +180,6 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-
 # visual
 
 # disable window borders
@@ -185,7 +187,7 @@ for_window [class="^.*"] border pixel 0
 
 # gap size
 gaps inner 10
-gaps outer -10
+# gaps outer -10
 
 # only show gaps if more than one container
 smart_gaps on

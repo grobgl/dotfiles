@@ -9,6 +9,12 @@ xrdb -I$HOME ~/.Xresources
 # remap caps lock to escape
 setxkbmap -option caps:escape
 
+# modifier keys
+xmodmap ~/.Xmodmap
+
+# set background picture
+feh --bg-scale ~/.wallpapers/scandinavian_forest_fog.jpg
+
 # start redshift
 redshift &
 

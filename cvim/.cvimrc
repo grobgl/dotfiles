@@ -17,6 +17,7 @@ let qmark y = 'https://www.youtube.com/'
 let qmark v = 'https://www.theverge.com/'
 let qmark z = 'http://www.zeit.de/index'
 let qmark s = 'http://www.spiegel.de/'
+let qmark r = 'http://192.168.1.11/admin/queries.php'
 
 let searchlimit = 25
 let completionengines = ['google']

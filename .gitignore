@@ -1,6 +1,6 @@
 .vimperator/info/default/history-command
 .vimperator/info/default/history-search
-.ipython/profile_default/history.sqlite
+python/.ipython/profile_default/history.sqlite
 .vimperator/info/default/local-marks
 .vimperator/info/default/quickmarks
 umatrix/
