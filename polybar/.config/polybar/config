@@ -8,35 +8,22 @@
 ;=====================================================
 
 [colors]
-
-! hard contrast: *background: #1d2021
-background = #fdf6e3
-! soft contrast: *background: #32302f
-foreground = #073642
-! Black + DarkGrey
-color0 =  #282828
-color8 =  #928374
-! DarkRed + Red
-color1 =  #cc241d
-color9 =  #fb4934
-! DarkGreen + Green
-color2 =  #98971a
-color10 = #b8bb26
-! DarkYellow + Yellow
-color3 =  #d79921
-color11 = #fabd2f
-! DarkBlue + Blue
-color4 =  #458588
-color12 = #83a598
-! DarkMagenta + Magenta
-color5 =  #b16286
-color13 = #d3869b
-! DarkCyan + Cyan
-color6 =  #689d6a
-color14 = #8ec07c
-! LightGrey + White
-color7 =  #a89984
-color15 = #ebdbb2
+nord0 = #2E3440
+nord1 = #3B4252
+nord2 = #434C5E
+nord3 = #4C566A
+nord4 = #D8DEE9
+nord5 = #E5E9F0
+nord6 = #ECEFF4
+nord7 = #8FBCBB
+nord8 = #88C0D0
+nord9 = #81A1C1
+nord10 = #5E81AC
+nord11 = #BF616A
+nord12 = #D08770
+nord13 = #EBCB8B
+nord14 = #A3BE8C
+nord15 = #B48EAD
 
 [bar/mybar]
 dpi = 192
@@ -45,11 +32,11 @@ height = 60
 fixed-center = true 
 bottom = true
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = ${colors.nord0}
+foreground = ${colors.nord4}
 
 line-size = 2
-line-color = ${colors.color11}
+! line-color = ${colors.color11}
 
 padding-left = 0
 padding-right = 2
@@ -60,7 +47,8 @@ module-margin-right = 2
 font-0 = "SF Pro Display:size=10;5"
 font-1 = siji:pixelsize=10
 font-2 = unifont:fontformat=truetype:size=8:antialias=false
-font-3 = "Font Awesome 5 Pro:style=Regular:size=10;5"
+font-3 = "Font Awesome 5 Pro:style=Solid:size=10;5"
+! font-3 = "Font Awesome 5 Pro:style=Regular:size=10;5"
 font-4 = "Font Awesome 5 Brands:style=Regular:size=10;5"
 
 modules-left = i3
@@ -128,9 +116,9 @@ label-mode-background = #EC5f67
 ;   %output%
 ; Default: %icon%  %name%
 label-focused = %icon%
-label-focused-foreground = ${colors.foreground}
+label-focused-foreground = ${colors.nord4}
 ;label-focused-background = #EC5f67
-label-focused-underline = ${colors.foreground}
+label-focused-underline = ${colors.nord4}
 label-focused-padding = 2
 
 ; Available tokens:
@@ -140,7 +128,7 @@ label-focused-padding = 2
 ; Default: %icon%  %name%
 label-unfocused = %icon%
 label-unfocused-padding = 2
-label-unfocused-foreground = ${colors.foreground}
+label-unfocused-foreground = ${colors.nord4}
 
 ; Available tokens:
 ;   %name%
@@ -169,7 +157,7 @@ date = "%a %d-%m-%Y"
 time = %H:%M
 
 format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
+format-prefix-foreground = ${colors.nord4}
 
 
 label = %date%    %time%
@@ -181,11 +169,11 @@ type = custom/menu
 format-spacing = 1
 
 label-open = 
-label-open-foreground = ${colors.foreground}
+label-open-foreground = ${colors.nord4}
 label-close =  cancel
-label-close-foreground = ${colors.color1}
+label-close-foreground = ${colors.nord1}
 label-separator = |
-label-separator-foreground = ${colors.foreground}
+label-separator-foreground = ${colors.nord4}
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
