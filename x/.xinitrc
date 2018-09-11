@@ -12,6 +12,9 @@ setxkbmap -option caps:escape
 # modifier keys
 xmodmap ~/.Xmodmap
 
+# keystroke repeat rate
+xset r rate 200 30
+
 # set background picture
 feh --bg-scale ~/.wallpapers/scandinavian_forest_fog.jpg
 
