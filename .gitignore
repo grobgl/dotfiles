@@ -9,3 +9,5 @@ python/.ipython/profile_default/startup
 zsh/.zsh-update
 
 x/.Xresources.d/colors
+
+vim/.vim/colorscheme.vim

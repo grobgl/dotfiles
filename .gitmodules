@@ -10,3 +10,12 @@
 [submodule "vim/.vim/bundle/lightline.vim"]
 	path = vim/.vim/bundle/lightline.vim
 	url = git@github.com:itchyny/lightline.vim
+[submodule "base16/.config/base16-shell"]
+	path = base16/.config/base16-shell
+	url = git@github.com:chriskempson/base16-shell.git
+[submodule "vim/.vim/bundle/vim-commentary"]
+	path = vim/.vim/bundle/vim-commentary
+	url = git@github.com:tpope/vim-commentary
+[submodule "vim/.vim/bundle/base16-vim"]
+	path = vim/.vim/bundle/base16-vim
+	url = git@github.com:chriskempson/base16-vim.git

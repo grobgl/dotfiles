@@ -4,9 +4,6 @@
 " Sets how many lines of history VIM has to remember
 set history=500
 
-" Show line numbers
-set number
-
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -44,6 +41,9 @@ if has("win16") || has("win32")
 else
     set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
+
+" Show line numbers
+set number
 
 "Always show current position
 set ruler
@@ -87,8 +87,14 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Add a bit extra margin to the left
-set foldcolumn=1
+" No fold column
+set foldcolumn=0
+
+
+""""""""""""""""""""""""""""""
+" => Load pathogen stuff
+""""""""""""""""""""""""""""""
+execute pathogen#infect()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -97,11 +103,15 @@ set foldcolumn=1
 " Enable syntax highlighting
 syntax enable 
 
-try
-    colorscheme desert
-catch
-endtry
-
+let g:nord_underline = 1
+let g:nord_uniform_status_lines = 1
+let g:nord_cursor_line_number_background = 1
+let g:nord_italic_comments = 1
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+ 
 set background=dark
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -465,12 +475,6 @@ endif
 
 
 """"""""""""""""""""""""""""""
-" => Load pathogen stuff
-""""""""""""""""""""""""""""""
-execute pathogen#infect()
-
-
-""""""""""""""""""""""""""""""
 " => bufExplorer plugin
 """"""""""""""""""""""""""""""
 let g:bufExplorerDefaultHelp=0
@@ -547,11 +551,11 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'nord',
       \ }
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],

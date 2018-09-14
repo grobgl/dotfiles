@@ -32,7 +32,7 @@ height = 60
 fixed-center = true 
 bottom = true
 
-background = ${colors.nord0}
+background = ${colors.nord1}
 foreground = ${colors.nord4}
 
 line-size = 2
@@ -153,7 +153,7 @@ label-urgent-padding = 2
 type = internal/date
 interval = 5
 
-date = "%a %d-%m-%Y"
+date = "%a %d/%m"
 time = %H:%M
 
 format-prefix = "  "

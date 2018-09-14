@@ -8,3 +8,5 @@ URxvt*scrollBar: false
 URxvt.scrollBar: false
 
 URxvt.borderless: true
+
+URxvt.color12: rgb:5c/5c/ff
