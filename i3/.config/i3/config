@@ -167,9 +167,15 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # Media keys
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+# bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+bindsym XF86AudioRaiseVolume exec --no-startup-id /home/georg/.config/i3/raise_volume.sh
+bindsym Pause exec --no-startup-id /home/georg/.config/i3/raise_volume.sh
+# bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -10%
+bindsym Scroll_Lock exec pactl set-sink-volume 0 -10%
+# bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+bindsym Print exec pactl set-sink-mute 0 toggle
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness

@@ -1,6 +1,7 @@
 # load oh-my-zsh
 export ZSH=/home/georg/dotfiles/submodules/.oh-my-zsh
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 DEFAULT_USER=`whoami`
 ZSH_CUSTOM=~/.zsh.d/oh-my-zsh-custom
 plugins=(
@@ -20,6 +21,7 @@ source $ZSH/oh-my-zsh.sh
 
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+export TERM_ITALICS=true
 
 # zsh stuff {{{1
 
@@ -49,7 +51,7 @@ alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 
 # convenience aliases for editing configs
-alias ev='vim ~/.vim_runtime/my_configs.vim'
+alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
 alias ei='vim ~/.config/i3/config'
@@ -64,8 +66,7 @@ alias gc='git commit -m'
 alias gps='git push'
 
 # pi
-alias pi='ssh pi@192.168.1.4'
-alias pi3='ssh pi@192.168.1.11'
+alias pi='ssh pi@192.168.1.11'
 
 # environment vars {{{1
 

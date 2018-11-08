@@ -27,5 +27,8 @@ udiskie -t &
 # start insync
 insync start
 
+# start blueman applet
+blueman-applet &
+
 # start i3
 exec i3

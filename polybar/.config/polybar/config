@@ -47,13 +47,13 @@ module-margin-right = 2
 font-0 = "SF Pro Display:size=10;5"
 font-1 = siji:pixelsize=10
 font-2 = unifont:fontformat=truetype:size=8:antialias=false
-font-3 = "Font Awesome 5 Pro:style=Solid:size=10;5"
-! font-3 = "Font Awesome 5 Pro:style=Regular:size=10;5"
+! font-3 = "Font Awesome 5 Pro:style=Solid:size=10;5"
+font-3 = "Font Awesome 5 Pro:style=Regular:size=10;5"
 font-4 = "Font Awesome 5 Brands:style=Regular:size=10;5"
 
 modules-left = i3
 modules-center = xwindow
-modules-right = network date battery powermenu
+modules-right = network pulseaudio date battery powermenu
 
 tray-position = right
 tray-maxsize = 32
@@ -216,20 +216,23 @@ ramp-capacity-4 = 
 
 [module/network]
 type = internal/network
-interface = wlp2s0
-
-; Test connectivity every Nth update
-; A value of 0 disables the feature
-; NOTE: Experimental (needs more testing)
-; Default: 0
-;ping-interval = 10
-
-; Accumulate values from all interfaces
-; when querying for up/downspeed rate
-; Default: false
+interface = enp14s0u1u2
 accumulate-stats = true
+label-connected = %downspeed:9%
 
-label-connected = %downspeed:9% %essid%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+! sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+interval = 5
+! use-ui-max = true
+format-volume = <label-volume> <ramp-volume>
+format-muted = <label-muted>
+label-volume = %percentage%%
+label-muted = 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 
 [settings]

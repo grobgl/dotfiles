@@ -1,5 +1,8 @@
+! caps to escape
 clear Lock
 keycode 0x42=Escape
+
+! german umlauts
 keycode  26 = e E e E ediaeresis Ediaeresis ediaeresis
 keycode  30 = u U u U udiaeresis Udiaeresis udiaeresis
 keycode  31 = i I i I idiaeresis Idiaeresis idiaeresis

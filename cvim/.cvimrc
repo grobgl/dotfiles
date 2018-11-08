@@ -20,7 +20,24 @@ let qmark s = 'http://www.spiegel.de/'
 let qmark r = 'http://192.168.1.11/admin/queries.php'
 
 let searchlimit = 25
-let completionengines = ['google']
+let completionengines = ['duckduckgo']
+
+let searchengine d = 'https://duckduckgo.com/?q='
+let searchengine ducky = 'https://duckduckgo.com/?q=!ducky+%s'
+let searchengine g = 'https://www.google.co.uk/search?q'
+let searchengine lucky = 'http://www.google.co.uk/search?q=%s&btnI'
+
+let defaultengine = 'duckduckgo'
+
+
+" swap J and K for vertical tabs
+map J gt
+map K gT
+
+" feeling ducky
+map \ :open lucky<space>
+map | :tabnew lucky<space>
+
 
 " disable hints for certain links
 -> {{
@@ -72,6 +89,27 @@ site 'https://*.google.*/search*' {
 
   openSearchQueryTabbed -> {{ Command.show(false, `tabnew g ${new URL(window.location.href).searchParams.get("q")} `) }}
   map T :call openSearchQueryTabbed <CR>
+
+  switchToDdg -> {{ Command.execute(`open d ${new URL(window.location.href).searchParams.get("q")}`) }}
+  map <Leader>g :call switchToDdg <CR>
+
+  switchToDdgTabbed -> {{ Command.execute(`tabnew d ${new URL(window.location.href).searchParams.get("q")}`) }}
+  map <Leader>G :call switchToDdgTabbed <CR>
+}
+
+" use O and T in google to modify search query (instead of full search url)
+site 'https://duckduckgo.*/*' {
+  openSearchQuery -> {{ Command.show(false, `open d ${new URL(window.location.href).searchParams.get("q")} `) }}
+  map O :call openSearchQuery <CR>
+
+  openSearchQueryTabbed -> {{ Command.show(false, `tabnew d ${new URL(window.location.href).searchParams.get("q")} `) }}
+  map T :call openSearchQueryTabbed <CR>
+
+  switchToGoogle -> {{ Command.execute(`open g ${new URL(window.location.href).searchParams.get("q")}`) }}
+  map <Leader>g :call switchToGoogle <CR>
+
+  switchToGoogleTabbed -> {{ Command.execute(`tabnew g ${new URL(window.location.href).searchParams.get("q")}`) }}
+  map <Leader>G :call switchToGoogleTabbed <CR>
 }
 
 

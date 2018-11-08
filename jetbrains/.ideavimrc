@@ -15,3 +15,6 @@ nmap <C-h> <C-w>h
 
 vmap sc :s#\C\([a-z0-9]\+\)\(\u\)#\l\1_\l\2#g<CR>
 vmap cc :s#_\(\l\)#\u\1#g<CR>
+
+nmap H 0
+nmap L $

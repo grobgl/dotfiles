@@ -107,6 +107,7 @@ let g:nord_underline = 1
 let g:nord_uniform_status_lines = 1
 let g:nord_cursor_line_number_background = 1
 let g:nord_italic_comments = 1
+" colorscheme nord
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
@@ -252,6 +253,10 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap VIM 0 to first non-blank character
 map 0 ^
+
+" Jump to beginning/end of line using H/L instead of 0/$
+nmap H 0
+nmap L $
 
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
 nmap <M-j> mz:m+<cr>`z
