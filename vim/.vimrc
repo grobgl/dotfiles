@@ -112,8 +112,11 @@ if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
- 
+
+" italic comments
 set background=dark
+
+highlight Comment cterm=italic
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8

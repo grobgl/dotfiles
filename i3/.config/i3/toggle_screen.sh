@@ -1,7 +1,9 @@
 #!/bin/bash
 EXTERNAL_DPI=244
-EXTERNAL_OUTPUT="DP1-2"
-INTERNAL_OUTPUT="eDP1"
+# EXTERNAL_OUTPUT="DP1-2"
+EXTERNAL_OUTPUT="DP-1-1-2"
+# INTERNAL_OUTPUT="eDP1"
+INTERNAL_OUTPUT="eDP-1-1"
 
 # if we don't have a file, start at zero
 if [ ! -f "/tmp/monitor_mode.dat" ] ; then

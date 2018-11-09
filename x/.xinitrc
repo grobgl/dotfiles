@@ -1,5 +1,9 @@
 #! /bin/bash
 
+# select nvidia graphics card
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+
 # hidpi
 xrandr --dpi 220
 
