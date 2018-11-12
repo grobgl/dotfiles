@@ -51,7 +51,7 @@ font-2 = "SF Pro Display:size=10;5"
 
 modules-left = i3
 modules-center = xwindow
-modules-right = network pulseaudio date battery powermenu
+modules-right = network pulseaudio redshift redshiftChecker date battery powermenu
 
 tray-position = right
 tray-maxsize = 32
@@ -231,6 +231,20 @@ label-muted = 
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
+
+
+[module/redshift]
+type = custom/script
+interval = 1
+tail = true
+format = <label>
+exec = tail -F $(~/.config/polybar/redshift.sh path) 2>/dev/null
+
+[module/redshiftChecker]
+type = custom/script
+interval = 600
+format = <label>
+exec = ~/.config/polybar/redshift.sh &>/dev/null
 
 
 [settings]

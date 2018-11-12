@@ -1,8 +1,5 @@
 !! Hack font
 URxvt.font: xft:Hack Nerd Font Mono:size=10:hinting=True;antialias:True,xft:PowerlineSymbols,xft:Font Awesome 5 Pro:style=Regular:size=10
-!! URxvt.boldFont: xft:Hack Nerd Font Mono:style=Bold:size=10;hinting=True;antialias:True,xft:Font Awesome 5 Pro:style=Regular:size=10
-!! URxvt.italicFont: xft:Hack Nerd Font Mono:style=Italic:size=10;hinting=True;antialias:True,xft:Font Awesome 5 Pro:style=Regular:size=10
-!! URxvt.boldItalicFont: xft:Hack Nerd Font Mono:style=Bold Italic:size=10;hinting=True;antialias:True,xft:Font Awesome 5 Pro:style=Regular:size=10
 
 !! no scrollbar
 URxvt*scrollBar_right: false
