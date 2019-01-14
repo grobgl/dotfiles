@@ -1,20 +1,47 @@
 let mapleader = ","
 
+
+" closing and seaving
+nmap <silent> <leader>w :w!<cr>
+nmap <silent> <leader>x :x<cr>
+nmap <silent> <leader>q :q<cr>
+
+nmap <silent> <leader>d :action GotoDeclaration<cr>
+nmap <silent> <leader>u :action FindUsages<cr>
+nmap <silent> <leader>r :action RenameElement<cr>
+
+" comments
+nmap <silent> gcc :action CommentByLineComment<cr>
+
+" rename
+vmap <silent> <leader>r :action RenameElement<cr>
+
+" vmap gc :action CommentByLineComment<cr>
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" use magic regex mode
+" nnoremap / /\v
+" vnoremap / /\v
+
+" Ignore case when searching
+set ignorecase
+" When searching try to be smart about cases 
+set smartcase
+" Highlight search results
+set hlsearch
+" Makes search act like search in modern browsers
+set incsearch 
+" clear search
+map <silent> <leader><cr> :noh<cr>
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Surround.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set surround
-
-nmap <leader>f :action GotoFile<cr>
-nmap <leader>c :action GotoClass<cr>
-
-nmap <Leader>x :x<CR>
-nmap <Leader>q :q<CR>
-nmap <Leader>w :w<CR>
-
-; navigate between panes
-nmap <C-l> <C-w>l
-nmap <C-h> <C-w>h
-
-vmap sc :s#\C\([a-z0-9]\+\)\(\u\)#\l\1_\l\2#g<CR>
-vmap cc :s#_\(\l\)#\u\1#g<CR>
-
-nmap H 0
-nmap L $
