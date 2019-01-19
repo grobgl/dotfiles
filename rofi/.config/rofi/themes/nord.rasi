@@ -1,4 +1,18 @@
+configuration {
+    // The display name of this browser
+    display-ssh:                   "  ";
+    // The display name of this browser
+    display-run:                    "";
+    // The display name of this browser
+    display-drun:                   "";
+    // The display name of this browser
+    display-window:                 "";
+    display-combi:                  "";
+    //show-icons: true;
+}
+
 * {
+
     color-0: #2E3440;
     color-1: #3B4252;
     color-2: #434C5E;
@@ -15,26 +29,7 @@
     color-D: #EBCB8B;
     color-E: #A3BE8C;
     color-F: #B48EAD;
-}
 
-
-
-configuration {
-
-    // The display name of this browser
-    display-ssh:                   "  ";
-    // The display name of this browser
-    display-run:                    "";
-    // The display name of this browser
-    display-drun:                   "";
-    // The display name of this browser
-    display-window:                 "";
-    display-combi:                  "";
-    //show-icons: true;
-}
-
-
-* {
     foreground:  #ffeedd;
     backlight:   #ccffeedd;
     background-color:  transparent;
@@ -79,6 +74,8 @@ configuration {
     transparent: rgba(0,0,0,0);
     font: "SF Pro Display  24";
 }
+
+
 #window {
     location: center;
     anchor:   center;
