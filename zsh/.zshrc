@@ -68,6 +68,9 @@ alias gps='git push'
 # pi
 alias pi='ssh pi@192.168.1.11'
 
+# other
+alias py='ipython'
+
 # environment vars {{{1
 
 # use vim as text editor

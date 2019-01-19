@@ -1,0 +1,16 @@
+# Editors
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+venv/
+venv.bak/
+
+# Environments
+.env
+env/
+ENV/
+env.bak/

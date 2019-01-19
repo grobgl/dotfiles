@@ -33,7 +33,6 @@ fi
 # Specifying the icon(s) in the script
 # This allows us to change its appearance conditionally
 icon=""
-icon_off=""
 
 #Get redshift temperature
 pgrep -x redshift &>/dev/null
@@ -48,7 +47,7 @@ if [[ -z $temp ]]; then
     #Set an action on the icon so when somebody clicks on it it would run this script and start redshift
     icon="%{A1:$spath start:}$icon%{A}"
     #Update the bus, that will update the icon because of the tail -F in polybar config
-    echo "%{F#65737E}$icon_off%{F-}" >> $tpath      # Greyed out (not running)
+    echo "%{F#65737E}$icon%{F-}" >> $tpath      # Greyed out (not running)
 else
   #Same thing but when redshift is started the icon is blue,yellow,or orange and the action stops it
   icon="%{A1:$spath stop:}$icon%{A}"
